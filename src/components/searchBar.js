@@ -4,7 +4,7 @@ import { Field, reduxForm } from "redux-form";
 import { withRouter } from "react-router-dom";
 
 class SearchBar extends Component {
-  handleFormSubmit = function (query) {
+  handleFormSubmit = function ({ query }) {
     this.props.onSubmit(query);
   };
 
@@ -13,8 +13,10 @@ class SearchBar extends Component {
       <input type="text" placeholder="Search DailySmarty" {...field.input} />
     );
   }
+
   render() {
     const { handleSubmit } = this.props;
+
     return (
       <form
         className="search-bar"

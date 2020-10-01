@@ -11,6 +11,7 @@ class Results extends Component {
   handleSearchBarSubmit(query) {
     this.props.fetchPostsWithQuery(query);
   }
+
   render() {
     return (
       <div>
