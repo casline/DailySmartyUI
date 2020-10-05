@@ -53,6 +53,10 @@ class Post extends Component {
         </div>
       );
     });
+
+    if (links == 0) {
+      return <div className="no-content">No post link</div>;
+    }
     return links;
   }
 
@@ -68,7 +72,7 @@ class Post extends Component {
       return (
         <li
           className="result-post"
-          onMouseEnter={() => this.setState({ height: 70 })}
+          onMouseEnter={() => this.setState({ height: 80 })}
           onMouseLeave={() => this.setState({ height: 0 })}
         >
           <div className="result-post__topics">{this.renderTopics()}</div>
